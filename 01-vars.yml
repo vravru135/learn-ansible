@@ -1,27 +1,27 @@
-- name: Demo on variables
+- name: Demo on Variables
   hosts: localhost
   vars:
     URL: Sample.com
   tasks:
-    - name: Print URL variable
+    - name: Print URL Variable
       ansible.builtin.debug:
         msg: "{( URL )}"
 
 #Value states with a variable, like msg: {{ URL }} then quotes are needed, if it does not start with variable like msg: Hello {{ URL }}, then quotes are not needed.
 
-- name: Demo on Task variable
+- name: Demo on Task Variables
   hosts: localhost
   vars:
     URL1: example.com
     URL2: example.com
   tasks:
-    - name: Print URL1 variable
+    - name: Print URL1 Variable
       ansible.builtin.debug:
-        msg: "{{ URL }}"
+        msg: "{{ URL1 }}"
       vars:
         URL1: Sample.com
-    - name: Print URL2 variable
+    - name: Print URL2 Variable
       ansible.builtin.debug:
-        msg: "{{ URL }}"
+        msg: "{{ URL2 }}"
       vars:
         URL2: Sample.com
