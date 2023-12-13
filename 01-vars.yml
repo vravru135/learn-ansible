@@ -8,3 +8,20 @@
         msg: "{( URL )}"
 
 #Value states with a variable, like msg: {{ URL }} then quotes are needed, if it does not start with variable like msg: Hello {{ URL }}, then quotes are not needed.
+
+- name: Demo on Task variable
+  hosts: localhost
+  vars:
+    URL1: example.com
+    URL2: example.com
+  tasks:
+    - name: Print URL1 variable
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+      vars:
+        URL1: sample.com
+- name: Print URL2 variable
+  ansible.builtin.debug:
+    msg: "{{ URL }}"
+  vars:
+    URL2: Sample.com
