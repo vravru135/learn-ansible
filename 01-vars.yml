@@ -1,4 +1,4 @@
-- name: Demo on Variables
+- name: Demo on variables
   hosts: localhost
   vars:
     URL: Sample.com
