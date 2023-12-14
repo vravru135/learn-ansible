@@ -4,13 +4,13 @@
   tasks:
    - name: Installing Nginx
      ansible.builtin.dnf:
-       name: nginx
-       state: present
+        name: nginx
+        state: present
    - name: Copy Expense Config File
      ansible.builtin.copy:
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
-   - name: clean old nginx Dir
+   - name: Clean Old Nginx Dir
      ansible.builtin.file:
         path: /usr/share/nginx/html
         state: absent
