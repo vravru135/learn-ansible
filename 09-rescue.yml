@@ -6,10 +6,10 @@
         ansible.builtin.debug:
           msg: 'I execute normally'
       - name: Force a failure
-        ansible.builtin.debug:
+        ansible.builtin.debug: /bin/false
       - name: Never print this
         ansible.builtin.debug:
-          msg: I never execute, due to the above task failing :-(
+          msg: 'I never execute, due to the above task failing :-('
 
 
 
