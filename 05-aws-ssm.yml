@@ -1,4 +1,4 @@
-- name: Demo on AWS ssm parameter pull
+- name: Demo on AWS SSM Parameter pull
   hosts: localhost
   tasks:
     - name: lookup ssm parameter store in the current region
