@@ -8,3 +8,11 @@
         - apple
         - banana
         - orange
+- name: Demo on loop
+  hosts: localhost
+  vars:
+    fruits:
+      - apple
+      - banana
+      - orange
+      -
