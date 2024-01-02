@@ -15,4 +15,8 @@
       - apple
       - banana
       - orange
-      -
+  tasks:
+    - name: loop
+      ansible.builtin.debug:
+        msg: Fruit - {{ item }}
+      loop: "{{fruits}}"
