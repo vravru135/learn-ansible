@@ -6,4 +6,4 @@
       register: OUT
     - name: Print no of users logged in
       ansible.builtin.debug:
-        msg: "{{ (OUT.stdout |  split(',')) [1] | split(' ') }}"
+        msg: "{{ ((OUT.stdout |  split(','))[1] | split(' '))[2] }}"
