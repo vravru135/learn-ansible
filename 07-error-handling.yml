@@ -3,3 +3,6 @@
   tasks:
     - name: Same shell command
       ansible.builtin.shell: ls
+    - name: Print Hello
+      ansible.builtin.debug:
+        msg: Hello
