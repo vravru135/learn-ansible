@@ -1,0 +1,5 @@
+- name: Demo on Error handling
+  hosts: localhost
+  tasks:
+    - name: Same shell command
+      ansible.builtin.shell: ls
